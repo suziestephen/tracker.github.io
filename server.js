@@ -178,3 +178,19 @@ const connection = mysql.createConnection({
       start();
     });
   }
+
+  function updateRole() {
+    const query = 'SELECT id, first_name, last_name, role_id  FROM employee';
+    connection.query(query, (err, res) => {
+      if (err) throw err;
+      console.table(res);
+      {
+        inquirer.prompt({
+          type: 'input',
+          message: 'Please select the employee to be updated (using the number from id column only)',
+          name: 'employee'
+        });
+      }
+    });
+  }
+  
