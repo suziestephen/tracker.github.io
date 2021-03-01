@@ -6,7 +6,7 @@ Developers are often tasked with creating interfaces that make it easy for non-d
 
 
   # Working Application
-https://media.giphy.com/media/u24kPV699pZ5S0rSW8/giphy.gif
+https://media.giphy.com/media/iuMRi1rP2CQb0iNMk5/giphy.gif
  
  
 
