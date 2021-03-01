@@ -197,7 +197,14 @@ const connection = mysql.createConnection({
           message: "What do you want to update to?",
           name: "updateRole"
           }
-        ]);
+        ])
+
+        connection.query('UPDATE employee SET role_id=? WHERE first_name= ?',[answer.updateRole, answer.eeUpdate],function(err, res) {
+          if (err) throw err;
+          console.table(res);
+          startScreen();
+        });
+  }
       }
     });
   }
