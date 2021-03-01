@@ -185,12 +185,21 @@ const connection = mysql.createConnection({
       if (err) throw err;
       console.table(res);
       {
-        inquirer.prompt({
+        inquirer.prompt([
+          {
           type: 'input',
           message: 'Please select the employee to be updated (using the number from id column only)',
           name: 'employee'
-        });
+          },
+
+          {
+          type: "input",
+          message: "What do you want to update to?",
+          name: "updateRole"
+          }
+        ]);
       }
     });
   }
+
   
