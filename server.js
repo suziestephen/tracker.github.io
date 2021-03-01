@@ -204,7 +204,6 @@ const connection = mysql.createConnection({
           console.table(res);
           startScreen();
         });
-  }
       }
     });
   }
