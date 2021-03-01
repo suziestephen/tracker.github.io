@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table');
+const { exit } = require('process');
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -202,7 +203,7 @@ const connection = mysql.createConnection({
         connection.query('UPDATE employee SET role_id=? WHERE first_name= ?',[answer.updateRole, answer.eeUpdate],function(err, res) {
           if (err) throw err;
           console.table(res);
-          startScreen();
+          start();
         });
       }
     });
